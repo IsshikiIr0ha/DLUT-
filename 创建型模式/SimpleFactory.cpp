@@ -32,13 +32,13 @@ class Minus:public Operation{
     }
 };
 
-class Multiple:public Operation{
+class Multiply:public Operation{
     double getResult(){
         return this->getA() * this->getB();
     }
 };
 
-class Divide:public Operation{
+class Devision:public Operation{
     double getResult(){
         if(this->getB())
             return this->getA() / this->getB();
@@ -59,10 +59,10 @@ class Factory{
                 return new Minus;
                 break;
             case '*':
-                return new Multiple;
+                return new Multiply;
                 break;
             case '/':
-                return new Divide;
+                return new Devision;
                 break;
             default:
                 return nullptr;
